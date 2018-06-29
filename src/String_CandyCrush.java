@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class CandyCrush {
+public class String_CandyCrush {
   public static void main(String[] args) {
     String str = "abbbbcc"; //acc
     String str2 = "abcccbb"; //a

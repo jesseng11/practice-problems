@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class FirstRepeating {
+public class Hash_FirstRepeating {
   public static void main(String[] args) {
     int arr[] = {10, 5, 3, 4, 5, 3, 6};
     System.out.println(getFirstRepeating(arr));

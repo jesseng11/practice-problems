@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class RomanToInt {
+public class MathString_RomanToInt {
   public static void main(String[] args) {
     String str = "MCMIV";
     System.out.println("Integer form of Roman Numeral" +

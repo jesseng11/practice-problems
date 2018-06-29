@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class ConwayGameOfLife {
+public class MatrixArrayList_ConwayGameOfLife {
   public static void main(String[] args) {
     ArrayList<Coordinates> state = new ArrayList<>();
     state.add(new Coordinates(0, -1));

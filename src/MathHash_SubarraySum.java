@@ -7,7 +7,7 @@ import java.util.*;
  * If there are more than one subarrays with sum 
  * as the given number, print any of them.
  */
-public class SubarraySum {
+public class MathHash_SubarraySum {
 
   public static void main(String[] args) {
     int target = 60;

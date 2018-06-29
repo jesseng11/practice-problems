@@ -5,7 +5,7 @@ import java.util.*;
  * Given a collection of intervals, 
  * merge all overlapping intervals.
  */
-public class MergeIntervals {
+public class StackList_MergeIntervals {
   public static void main(String[] args) {
     Interval a = new Interval(1, 4);
     Interval b = new Interval(6, 7);

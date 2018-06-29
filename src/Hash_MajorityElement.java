@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class MajorityElement {
+public class Hash_MajorityElement {
   public static void main(String[] args) {
     int[] arr = new int[]{2,2,2,2,5,5,2,3,3};
 

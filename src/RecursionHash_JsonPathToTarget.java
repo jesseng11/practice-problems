@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class JsonPathToTarget {
+public class RecursionHash_JsonPathToTarget {
   public static void main(String[] args) {
     HashMap<String, Object> json = new HashMap<String, Object>();
     json.put("name", "Lucy");

@@ -23,7 +23,7 @@ X can be placed before L (50) and C (100) to make 40 and 90.
 C can be placed before D (500) and M (1000) to make 400 and 900.
 */
 
-public class IntToRoman {
+public class MathString_IntToRoman {
   public static void main(String[] args) {
     System.out.println(intToRoman(3));
     System.out.println(intToRoman(4));

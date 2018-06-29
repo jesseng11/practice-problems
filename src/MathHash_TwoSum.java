@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class TwoSum {
+public class MathHash_TwoSum {
   public static void main(String[] args) {
     int A[] = {1, 4, 45, 6, 10, 8, 8};
     int sum = 16;

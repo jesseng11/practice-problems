@@ -5,7 +5,7 @@ import java.util.*;
  * Given an array arr[], find the maximum 
  * j – i such that arr[j] > arr[i].
  */
-public class MaxDiffInArr {
+public class Math_MaxDiffInArray {
   public static void main(String[] args) {
     int[] arr = {4,1,2,3};
     System.out.println(maxDiff(arr));
