@@ -13,7 +13,8 @@ public class LRUCache {
     head = null;
     tail = null;
   }
-  
+
+  //Return the value associated with the key or null if the key doesn't exist
   //O(1)
   public int get(int key) {
     if(cache.containsKey(key)) {
@@ -26,31 +27,11 @@ public class LRUCache {
     return -1;
   }
   
-  private void remove(QueueNode n) {
-    if(n.prev != null)
-      n.prev.next = n.next;
-    else
-      head = n.next;
-    
-    if(n.next != null)
-      n.next.prev = n.prev;
-    else
-      tail = n.prev;
-  }
-  
-  private void moveToHead(QueueNode n) {
-    n.prev = null;
-    n.next = head;
-    
-    if(head != null)
-      head.prev = n;
-    
-    head = n;
-    
-    if(tail == null)
-      tail = head;
-  }
-  
+  /**
+   *  If key already exists, replace the current value with the new value.
+   *  If the key doesn't exist, add the new key/value entry to the cache.
+   *  If the addition of the new entry causes the number of entries to exceed numEntries, remove the oldest entry based on the last time the entry is accessed (either through put or get).
+   */
   //O(1)
   public void put(int key, int value) {
     if(cache.containsKey(key)) {
@@ -70,6 +51,30 @@ public class LRUCache {
       moveToHead(n);
       cache.put(key, n);
     }
+  }
+  
+  private void remove(QueueNode n) {
+    if(n.prev != null)
+      n.prev.next = n.next;
+    else
+      head = n.next;
+    
+    if(n.next != null)
+      n.next.prev = n.prev;
+    else
+      tail = n.prev;
+  }
+  
+  private void moveToHead(QueueNode n) {
+    if(tail == null) {
+        tail = n;
+        head = n;
+    }
+    
+    n.prev = null;
+    n.next = head;
+    head.prev = n;
+    head = n;
   }
 
   public static void main(String[] args) {
@@ -128,6 +133,7 @@ public class LRUCache {
   }
 }
 
+//doubly linked list
 class QueueNode {
   int key;
   int value;
