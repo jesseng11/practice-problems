@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class String_isAnagram {
+public class String_IsAnagram {
   public static void main(String[] args) {
     String string1 = "Hello, World!";
     String string2 = "Welcome to CoderPad.";
