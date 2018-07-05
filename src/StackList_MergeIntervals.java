@@ -25,7 +25,11 @@ public class StackList_MergeIntervals {
   private static class IntervalComparator implements Comparator<Interval> {
     @Override
     public int compare(Interval a, Interval b) {
-      return a.start < b.start ? -1 : a.start == b.start ? 0 : 1; 
+      if(a.start < b.start)
+    	  return -1;
+      else if(a.start == b.start)
+    	  return 0;
+      return 1; 
     }
   }
   

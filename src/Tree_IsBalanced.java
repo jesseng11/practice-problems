@@ -3,14 +3,22 @@ import java.util.*;
 
 public class Tree_IsBalanced {
   public static void main(String[] args) {
-    ArrayList<String> strings = new ArrayList<String>();
-    strings.add("Hello, World!");
-    strings.add("Welcome to CoderPad.");
-    strings.add("This pad is running Java 8.");
-
-    for (String string : strings) {
-      System.out.println(string);
-    }
+	    TreeNode root = new TreeNode(20);
+	    root.insertInOrder(10);
+	    root.insertInOrder(30);
+	    root.insertInOrder(5);
+	    root.insertInOrder(15);
+	    //root.insertInOrder(17);
+	    //root.insertInOrder(3);
+	    //root.insertInOrder(7);
+	/*
+	              20
+	          10      30
+	       5     15
+	    3    7      17
+	*/
+	    System.out.println(isBalancedTree(root));
+	    System.out.println(isBalanced(root));
   }
   
   //Solution 1: recursive

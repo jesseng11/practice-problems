@@ -1,6 +1,7 @@
 import java.io.*;
 import java.util.*;
 
+//DFS is preferred if we want to visit every node in the graph
 public class DFS {
   public static void main(String[] args) {
     ArrayList<String> strings = new ArrayList<String>();
@@ -14,14 +15,18 @@ public class DFS {
   }
   
   //O(V+E)
-  public static boolean dfs(Graph g, Node start, Node end) {
+  public static boolean dfs(Graph g, Graph.Node start, Graph.Node end) {
     if(start == end)
       return true;
     
-    start.state = 1;
+    for(Graph.Node n: g.getNodes()) {
+	  n.state = Graph.State.Unvisited;
+	}
     
-    for(Node n: start.children) {
-      if(n.state == -1) {
+    start.state = Graph.State.Visited;
+    
+    for(Graph.Node n: start.getAdjacent()) {
+      if(n.state == Graph.State.Unvisited) {
         if(n == end)
           return true;
         else
