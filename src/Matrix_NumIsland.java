@@ -15,7 +15,7 @@ public class Matrix_NumIsland {
     System.out.println(numberOfIslands(map));
   }
   
-  public static int numberOfIslands(int [][] map) {
+  public static int numberOfIslands(int[][] map) {
     int number = 0;
     
     for(int i = 0; i < map.length; i++) {

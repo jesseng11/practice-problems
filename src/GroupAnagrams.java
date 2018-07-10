@@ -1,9 +1,21 @@
 import java.util.*;
 
-public class GroupAnagrams {
+public class GroupAnagrams {  
+	public static void main(String[] args) {
+		String[] anagrams = {"cab", "top", "pot", "cba", "abc"};
+		
+//		for(List<String> groups: groupAnagramsOkay(anagrams)) {
+//			System.out.println(groups);
+//		}
+		
+		for(List<String> groups: groupAnagrams(anagrams)) {
+			System.out.println(groups);
+		}
+	}
+	
 	//time: O(nklogk) where n is length of strs and k is max length of string in str
 	//space: O(nk)
-	public List<List<String>> groupAnagramsOkay(String[] strs) {
+	public static List<List<String>> groupAnagramsOkay(String[] strs) {
 		if(strs.length == 0)
 			return new ArrayList();
 		
@@ -27,7 +39,7 @@ public class GroupAnagrams {
 	}
 	
 	//O(nk) for both space and time
-	public List<List<String>> groupAnagrams(String[] strs) {
+	public static List<List<String>> groupAnagrams(String[] strs) {
 		if(strs.length == 0)
 			return new ArrayList();
 		
